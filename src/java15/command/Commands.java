@@ -4,6 +4,7 @@ import java15.dao.MovieFindableDao;
 import java15.dao.MovieSortableDao;
 import java15.dao.impl.MovieFindableDaoImpl;
 import java15.dao.impl.MovieSortableDaoImpl;
+import java15.database.Database;
 import java15.model.Genre;
 
 import java.time.LocalDate;
@@ -114,6 +115,8 @@ public class Commands {
                     } catch (RuntimeException e) {
                         System.out.println("Error: " + e.getMessage());
                     }
+                    System.out.println("Movies before sorting:");
+                    System.out.println(Database.movies);
                 }
                 case "9" -> {
                     System.out.print("Write 'asc' or 'desc': ");
@@ -124,6 +127,8 @@ public class Commands {
                     } catch (RuntimeException e) {
                         System.out.println("Error: " + e.getMessage());
                     }
+                    System.out.println("Movies before sorting:");
+                    System.out.println(Database.movies);
                 }
                 case "10" -> {
                     System.out.print("Sort by 'name' or 'lastname': ");
@@ -134,6 +139,8 @@ public class Commands {
                     } catch (RuntimeException e) {
                         System.out.println("Error: " + e.getMessage());
                     }
+                    System.out.println("Movies before sorting:");
+                    System.out.println(Database.movies);
                 }
                 case "11" -> {
                     System.out.println("Exiting the program...");
